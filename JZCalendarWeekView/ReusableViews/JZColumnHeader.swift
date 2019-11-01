@@ -19,7 +19,6 @@ open class JZColumnHeader: UICollectionReusableView {
     public override init(frame: CGRect) {
         super.init(frame: .zero)
         setupUI()
-        backgroundColor = .clear
     }
 
     required public init?(coder aDecoder: NSCoder) {
@@ -31,12 +30,13 @@ open class JZColumnHeader: UICollectionReusableView {
         self.clipsToBounds = true
         let stackView = UIStackView(arrangedSubviews: [lblWeekday, lblDay])
         stackView.axis = .vertical
-        stackView.spacing = 2
+        stackView.spacing = 3
         addSubview(stackView)
         stackView.setAnchorConstraintsEqualTo(centerXAnchor: centerXAnchor, centerYAnchor: centerYAnchor)
         lblDay.textAlignment = .center
         lblWeekday.textAlignment = .center
-        lblDay.font = UIFont.systemFont(ofSize: 17)
+        
+        lblDay.font = UIFont.systemFont(ofSize: 10)
         lblWeekday.font = UIFont.systemFont(ofSize: 12)
     }
 
@@ -44,7 +44,7 @@ open class JZColumnHeader: UICollectionReusableView {
         let weekday = calendarCurrent.component(.weekday, from: date) - 1
 
         lblDay.text = String(calendarCurrent.component(.day, from: date))
-        lblWeekday.text = dateFormatter.shortWeekdaySymbols[weekday].uppercased()
+        lblWeekday.text = dateFormatter.shortWeekdaySymbols[weekday]
 
         if date.isToday {
             lblDay.textColor = JZWeekViewColors.today
