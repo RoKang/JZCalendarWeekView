@@ -356,7 +356,7 @@ open class JZWeekViewFlowLayout: UICollectionViewFlowLayout {
         let calendarGridWidth = collectionViewContentSize.width - rowHeaderWidth - contentsMargin.left - contentsMargin.right
         var attributes = UICollectionViewLayoutAttributes()
 
-        for hour in 10...19 {
+        for hour in 9...19 {
             (attributes, horizontalGridlineAttributes) = layoutAttributesForDecorationView(at: IndexPath(item: horizontalGridlineIndex, section: 0),
                                                                                            ofKind: JZDecorationViewKinds.horizontalGridline,
                                                                                            withItemCache: horizontalGridlineAttributes)
