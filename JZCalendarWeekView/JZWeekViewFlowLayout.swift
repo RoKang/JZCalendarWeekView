@@ -41,7 +41,7 @@ open class JZWeekViewFlowLayout: UICollectionViewFlowLayout {
     open var itemMargin: UIEdgeInsets { return UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1) }
     /// weekview contentSize height
     open var maxSectionHeight: CGFloat {
-        let height = hourHeight * 10 // statement too long for Swift 5 compiler
+        let height = hourHeight * 9 // statement too long for Swift 5 compiler
         return columnHeaderHeight + height + allDayHeaderHeight
 //         + contentsMargin.top + contentsMargin.bottom
     }
