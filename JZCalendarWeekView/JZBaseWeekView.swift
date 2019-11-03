@@ -70,7 +70,7 @@ open class JZBaseWeekView: UIView {
     open var contentViewWidth: CGFloat {
         return frame.width - flowLayout.rowHeaderWidth - flowLayout.contentsMargin.left - flowLayout.contentsMargin.right
     }
-    private var isFirstAppear: Bool = true
+    private var isFirstAppear: Bool = false
     internal var isAllDaySupported: Bool!
     internal var scrollDirection: ScrollDirection?
 
